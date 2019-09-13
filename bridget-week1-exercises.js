@@ -74,5 +74,23 @@ makeAllCaps(sortArr)
     .catch(error => console.log(error));
 
 
+/** Display Movie Images*/
+
+var title = "bad boys ii";
+var titleArr= title.split(" ");
+console.log(titleArr);
+let newtitle = titleArr.join('+');
+console.log(newtitle);
+
+let url ='';
+
+fetch( `http://www.omdbapi.com/?t=${title}&apikey=aaa42d5e`)
+    .then(res => res.json())
+    .then(data => {
+        let img = document.createElement("img");
+        img.src = data.Poster;
+        document.body.appendChild(img);
+    });
+
 
 
