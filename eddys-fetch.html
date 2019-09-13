@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>promises</title>
+</head>
+<body>
+
+
+<script>
+
+
+
+
+    // convert es5 to es6
+
+    const dscAmount = (amount, percent) => amount - (amount * percent);
+    console.log('Simple conversiom');
+    console.log(dscAmount(100, .20));
+
+    // using map
+
+    const numArr = [10,2,9,11,12];
+    const odd = numArr.filter(n => n % 2 !== 0);
+    console.log('Using Map');
+    console.log(odd)
+
+
+    // using reduce
+
+    const euro = [29.76, 41.85, 46.5];
+
+    const above30 = euro.reduce((total, amount) => {
+        if (amount > 30) {
+            total.push(amount);
+        }
+        return total;
+    }, []);
+    console.log('reduce');
+    console.log(above30);
+
+
+</script>
+</body>
+</html>
