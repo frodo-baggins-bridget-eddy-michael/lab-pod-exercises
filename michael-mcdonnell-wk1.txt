@@ -1,0 +1,1 @@
+I will be working on Functional Idioms: map, filter, and reduce
